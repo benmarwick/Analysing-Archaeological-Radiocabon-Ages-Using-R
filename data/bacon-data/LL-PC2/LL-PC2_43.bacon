@@ -1,0 +1,16 @@
+## Ran on Sun Jul  5 00:38:16 2020 
+
+Cal 0 : ConstCal;
+Cal 1 : IntCal13, 0;
+Cal 2 : Marine13;
+Cal 3 : SHCal13, 0;
+
+##   id.   age    std   depth  delta.R  delta.STD     t.a   t.b   cc
+Det 0 : LL082011-C2-124 ,  623,  34,  9,  0,  0,  3,  4,  1;
+Det 1 : UOC-0845 , 575, 18, 37.5;
+Det 2 : LL082011-C2-87 , 4396, 55, 46;
+Det 3 : UOC-0844 , 8582, 28, 70.5;
+Det 4 : LL082011-C2-39 , 9148, 49, 94;
+
+##		 K   MinAge   MaxAge   th0   th0p   w.a   w.b   alpha  beta  dmin  dmax
+Bacon 0: FixT, 43,  -70,  1e+06,  627,  560,  2.8,  1.2,  1.5,  0.015, 9, 95;

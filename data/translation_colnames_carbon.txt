@@ -1,0 +1,31 @@
+colID	JP	EN	note
+1	項番	no.	a running number
+2	番号	UID	
+3	都道府県	prefecture	
+4	遺跡名	site name	
+5	所在地	location	in street address
+6	サンプル採取地点等	sampling locality	excavation area, trench, layer etc.
+7	試料の種類	type of sample	char, bone(sp.), shell(sp.), etc.
+8	試料コード1	sample classification code 1(T=terrestrial, M=marine, O=others)
+9	試料コード2	sample classification code 2(a=animal bone, b=human bone, c=shell, d=wood...)
+10	時代	age	
+11	時代詳細	period	
+12	時代コード	age code	
+13	資料番号	sample ID	laboratory code	
+14	測定方法	method	AMS or beta	
+15	C14年代	conventional carbon date	median
+16	C14年代±	error range of conventional carbon date	
+17	暦年較正用C14年代	original carbon date	for calibration
+18	暦年較正用C14年代±	error range of original carbon date	for calibration
+19	δ13C(AMS)	delta 13C(AMS)	
+20	δ13C(AMS)±	error range of delta 13C(AMS)	
+21	δ13C(IRMS)	delta 13C(IRMS)	measured by IR-MS
+22	分析者（著者）	author	
+23	分析機関	laboratory	
+24	刊行年	publishing year	
+25	報告タイトル	title of paper	
+26	ページ	pages of paper	
+27	備考	note	
+28	報告書名	title of report	
+29	発行者	publishing organization	
+
