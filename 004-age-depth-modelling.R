@@ -14,7 +14,6 @@ dates <- tribble(
 
 dates
 
-
 #--------------------------------------------
 library(rbacon)
 

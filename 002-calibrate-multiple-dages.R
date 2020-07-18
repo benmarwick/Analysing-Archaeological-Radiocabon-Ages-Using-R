@@ -41,6 +41,8 @@ ages3 <-  BchronCalibrate(ages=c(3445,11553,7456),
                         positions=c(0, 20, 10),
                         calCurves=rep('intcal13',3))
 summary(ages3)
+
+library(ggplot2)
 plot(ages3, 
      dateHeight = 10,
      dateLabels = TRUE

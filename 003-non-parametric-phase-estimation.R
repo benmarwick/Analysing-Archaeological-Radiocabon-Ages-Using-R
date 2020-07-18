@@ -2,7 +2,10 @@
 
 library(Bchron)
 
-data(Sluggan)
+data(Sluggan) # dataset build into package
+
+str(Sluggan)
+
 SlugDens <- 
   BchronDensity(ages=Sluggan$ages,
                 ageSds=Sluggan$ageSds,
