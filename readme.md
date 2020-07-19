@@ -18,6 +18,7 @@ topics:
 You can download the code and data from this repository onto your computer by running the following line in your R console:
 
 ```r
+if (!require("usethis")) install.packages("usethis") # to install usethis
 usethis::use_course("benmarwick/Analysing-Archaeological-Radiocabon-Ages-Using-R")
 ```
 
