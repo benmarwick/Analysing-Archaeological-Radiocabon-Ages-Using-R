@@ -31,6 +31,8 @@ We will be using the following R packages:
 - [rbacon](https://chrono.qub.ac.uk/blaauw/manualBacon_2.3.pdf)
 - [tidyverse](https://www.tidyverse.org/)
 
+These packages have excellent documentation for learning more about how to use their functions. Click on the name of the package in the list above to go to the documentation. 
+
 You can install these by running the following line in your R console:
 
 ```r
