@@ -15,7 +15,7 @@ topics:
 5.  Summed probability density plots
 6.  Hypothesis testing with SPDs
 
-You can download the code and data from this repository onto your computer by running the following lines in your R console:
+You can download the code and data from this repository onto your computer by running the following lines in your R console (please answer 'Yes' to each question that appears in your console):
 
 ```r
 if (!require("usethis")) install.packages("usethis") # to install usethis
