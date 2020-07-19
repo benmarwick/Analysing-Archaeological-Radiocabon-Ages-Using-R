@@ -5,7 +5,7 @@ Ben Marwick, July 2020
 ## Overview
 
 In this workshop we will practice some techniques for analysing
-archaeological radiocabon ages using R. Here’s the outline of key
+archaeological radiocabon ages using R. Here are the [slides](https://docs.google.com/presentation/d/1CnenM0imyfxBRZUdeuTP6afRMvEZbg99nsLmbvSOeaE/edit?usp=sharing). Here’s the outline of key
 topics:
 
 1.  Calibrate and plot a single age
