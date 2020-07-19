@@ -25,10 +25,10 @@ usethis::use_course("benmarwick/Analysing-Archaeological-Radiocabon-Ages-Using-R
 
 We will be using the following R packages:
 
-- rcarbon
-- Bchron
-- rbacon
-- tidyverse
+- [rcarbon](https://cran.r-project.org/web/packages/rcarbon/vignettes/rcarbon.html)
+- [Bchron](https://cran.r-project.org/web/packages/Bchron/vignettes/Bchron.html)
+- [rbacon](https://chrono.qub.ac.uk/blaauw/manualBacon_2.3.pdf)
+- [tidyverse](https://www.tidyverse.org/)
 
 You can install these by running the following line in your R console:
 
