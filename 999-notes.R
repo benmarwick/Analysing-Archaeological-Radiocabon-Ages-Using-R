@@ -10,6 +10,8 @@
 # getting data: https://github.com/ropensci/c14bazAAR includes get_c14data("jomon")
 # https://github.com/ISAAKiel/oxcAAR
 
+# https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0154809
+
 #- calibrate a single age & plot
 #- calibrate multiple ages & plot with Bchron
 #- age-depth model with Bchron
