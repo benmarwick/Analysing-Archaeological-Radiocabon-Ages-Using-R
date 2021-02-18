@@ -1,3 +1,98 @@
+# Crema, E.R., Bevan, A. 2020 Inference from Large Sets of Radiocarbon Dates: 
+# Software and Methods Radiocarbon, doi:10.1017/RDC.2020.95
+
+library(rcarbon)
+data(euroevol)
+DK <- subset(euroevol,
+             Country=="Denmark") #subset of Danish dates
+
+str(DK)
+
+# hack for parallel computing on OSX, from https://github.com/rstudio/rstudio/issues/6692
+parallel:::setDefaultClusterOptions(setup_strategy = "sequential")
+
+# calibrate (can skip if just run)
+DK.caldates <- 
+  calibrate(x=DK$C14Age,
+            errors=DK$C14SD,
+            calCurves='intcal20',
+            ncores=3) # running calibration over 3 cores
+
+# Dates are assigned to the same or different bins based on their proximity 
+# to one another in (either 14C in time or median calibrated date) using 
+# hierarchical clustering with a user-defined cut-off value
+DK.bins <-  binPrep(sites=DK$SiteID,
+                    ages=DK$C14Age,
+                    h=100)
+
+# Test for fit to exponential model 
+nsim = 100
+expnull <- 
+  modelTest(DK.caldates, 
+            errors=DK$C14SD, 
+            bins=DK.bins, 
+            nsim=nsim, 
+            timeRange=c(8000, 4000), 
+            model="exponential", runm=100)
+
+# take a look
+plot(expnull)
+
+# see p-value: does the model fit the data? <0l05 means no
+expnull$pval
+
+# see when the deviations are
+summary(expnull)
+
+# Test for fit to uniform model 
+uninull <- 
+  modelTest(DK.caldates, 
+            errors=DK$C14SD, 
+            bins=DK.bins, 
+            nsim=nsim, 
+            timeRange=c(8000, 4000), 
+            model="uniform", runm=100)
+
+# take a look
+plot(uninull)
+
+# see p-value: does the model fit the data?
+uninull$pval
+
+# see when the deviations are
+summary(uninull)
+
+
+# other things rcarbon can do:
+
+# - Testing against custom growth models, e.g. residential count data
+# - Testing Local Growth Rates
+# - Comparing empirical SPDs against each other, e.g. to evaluate regional variations in population trends
+# - Spatio-Temporal Kernel Density Estimates
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Look out: the code below takes such a long time!
 # https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0154809
 
 #---------------------------------

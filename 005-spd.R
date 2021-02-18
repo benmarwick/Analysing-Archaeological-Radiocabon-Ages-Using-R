@@ -1,5 +1,5 @@
 
-
+# Summed probability distribution 
 
 #----------------------------------
 library(rcarbon)
@@ -21,6 +21,7 @@ DK.caldates <-
 DK.spd <-  spd(DK.caldates,
                timeRange=c(8000, 4000)) 
 
+# need to run this first to make the base plot
 plot(DK.spd) 
 
 plot(
@@ -31,14 +32,12 @@ plot(
   col = "darkorange",
   lwd = 2,
   lty = 2
-) #using a rolling average of 200 years for smoothing
+) # using a rolling average of 200 years for smoothing
 
-# show SPD between 6000 and 3000 BC
-plot(DK.spd,
-     calendar = 'BCAD', 
-     xlim = c(-6000,-3000)) 
 
 #---------------------------------
+# Japanese radiocarbon data from Atsushi Noguchi, contact to reuse: asiansophia@gmail.com
+# Look out: it takes a long time to run!
 library(rcarbon)
 library(tidyverse)
 

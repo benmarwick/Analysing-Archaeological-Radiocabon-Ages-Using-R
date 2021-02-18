@@ -8,13 +8,14 @@ library(rcarbon)
 x <- 
   calibrate(x = 4200,
             errors = 30,
-            calCurves = 'intcal13')
+            calCurves = 'intcal20')
 
 summary(x)
 
 plot(x,
      HPD=TRUE,
-     credMass=0.95)
+     credMass=0.95,
+     main = "Lab ID goes here")
 
 
 
@@ -24,7 +25,7 @@ library(Bchron)
 ages1 <-  
   BchronCalibrate(ages = 4200,
                   ageSds = 30,
-                  calCurves = 'intcal13')
+                  calCurves = 'intcal20')
 
 summary(ages1)
 

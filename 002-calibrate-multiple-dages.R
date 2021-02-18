@@ -4,9 +4,9 @@
 #---------------------------------------------------
 library(rcarbon)
 xx <- 
-  calibrate(x=c(3445,7456, 11553),
-            errors=c(50,110, 230),
-            calCurves='intcal13')
+  calibrate(x=c(3445, 7456, 11553),
+            errors=c(50, 110, 230),
+            calCurves='intcal20')
 
 
 summary(xx)
@@ -26,20 +26,21 @@ summary(xx2)
 #---------------------------------------------------
 library(Bchron)
 
-ages2 = BchronCalibrate(ages=c(3445,11553,7456),
-                        ageSds=c(50,230,110),
-                        calCurves=rep('intcal13',3))
+ages2 = BchronCalibrate(ages=c(3445, 11553, 7456),
+                        ageSds=c(50, 230, 110),
+                        calCurves=rep('intcal20',3))
 summary(ages2)
+
 plot(ages2)
 
 # if we have some position info, we
 # can plot all on one
 
-ages3 <-  BchronCalibrate(ages=c(3445,11553,7456),
-                        ageSds=c(50,230,110),
+ages3 <-  BchronCalibrate(ages=c(3445, 11553, 7456),
+                        ageSds=c(50, 230, 110),
                         ids = c("Date 1A", "Date 1C", "Date 1B"),
                         positions=c(0, 20, 10),
-                        calCurves=rep('intcal13',3))
+                        calCurves=rep('intcal20', 3))
 summary(ages3)
 
 library(ggplot2)

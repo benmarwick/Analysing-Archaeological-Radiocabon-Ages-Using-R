@@ -1,6 +1,7 @@
 # from https://fishandwhistle.net/post/2018/comparing-approaches-to-age-depth-modelling-in-r/
 # https://journals.sagepub.com/doi/full/10.1177/0959683616675939
 
+# setup, skip to next section to run
 library(tidyverse)
 
 dates <- tribble(
@@ -14,10 +15,17 @@ dates <- tribble(
 
 dates
 
+write_csv(dates, "data/dates_for_bacon.csv")
+
 #--------------------------------------------
 library(rbacon)
+library(tidyverse)
+
+dates <- read_csv("data/dates_for_bacon.csv")
 
 # has a peculiar need to read data in from a CSV file
+# so we create a directory to store that, and the 
+# output that it generates
 dir.create("data/bacon-data/LL-PC2", recursive = TRUE)
 
 # and needs special column names
@@ -29,6 +37,7 @@ dates %>%
   arrange(depth) %>%
   write_csv("data/bacon-data/LL-PC2/LL-PC2.csv")
 
+# this takes a few moments
 Bacon(core = "LL-PC2", 
       coredir = "data/bacon-data", 
       ask = FALSE, 
@@ -37,9 +46,11 @@ Bacon(core = "LL-PC2",
       acc.mean = 100)
 
 
+# first plot
 calib.plot(rotate.axes = TRUE, 
            rev.yr = TRUE)
 
+# more detailed multi-panel plot
 agedepth(rotate.axes = TRUE, 
          rev.yr = TRUE)
 
